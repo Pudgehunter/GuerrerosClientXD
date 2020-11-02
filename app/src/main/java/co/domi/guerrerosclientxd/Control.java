@@ -36,8 +36,7 @@ public class Control extends AppCompatActivity {
         arribaBtn.setOnClickListener(
                 (v) -> {
                     Gson gson = new Gson();
-                    posY = posY - 100;
-                    Movimiento perso = new Movimiento("arriba",0,posY);
+                    Movimiento perso = new Movimiento("arriba",0,100);
                     String json = gson.toJson(perso);
                     tcp.Message(json);
                 }
@@ -46,8 +45,7 @@ public class Control extends AppCompatActivity {
         abajoBtn.setOnClickListener(
                 (v) -> {
                     Gson gson = new Gson();
-                    posY = posY + 100;
-                    Movimiento perso = new Movimiento("abajo",0,posY);
+                    Movimiento perso = new Movimiento("abajo",0,100);
                     String json = gson.toJson(perso);
                     tcp.Message(json);
                 }
@@ -56,8 +54,7 @@ public class Control extends AppCompatActivity {
         izquierdaBtn.setOnClickListener(
                 (v) -> {
                     Gson gson = new Gson();
-                    posX = posX - 100;
-                    Movimiento perso = new Movimiento("izquierda",posX,0);
+                    Movimiento perso = new Movimiento("izquierda",100,0);
                     String json = gson.toJson(perso);
                     tcp.Message(json);
                 }
@@ -66,8 +63,7 @@ public class Control extends AppCompatActivity {
         derechaBtn.setOnClickListener(
                 (v) -> {
                     Gson gson = new Gson();
-                    posX = posX + 100;
-                    Movimiento perso = new Movimiento("derecha",posX,0);
+                    Movimiento perso = new Movimiento("derecha",100,0);
                     String json = gson.toJson(perso);
                     tcp.Message(json);
                 }
